@@ -41,8 +41,8 @@ public class ContactoController {
     }
 
     @PostMapping(value="/contactos")
-    public void guardar(@RequestBody Contacto contacto) {
-        contactoService.save(contacto);
+    public Contacto guardar(@RequestBody Contacto contacto) {
+        return contactoService.save(contacto);
     }
 
     @PutMapping(value="/contactos/{id}")
